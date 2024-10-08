@@ -1,0 +1,23 @@
+{% for job in jobs %}
+<div class="border-bottom mb-2 p-2 row">
+  <div class="col-9">
+    <h5 style="color: gray"><b>{{ job['title']}} </b></h5>
+    <div><b>Location:</b> {{ job['location'] }}</div>
+    {% if job['salary'] %}
+    <div><b>Salary:</b> {{ job['salary'] }}</div>
+    {% endif %}
+  </div>
+  <div class="col-3 d-flex align-items-center justify-content-center">
+    <a
+      href="mailto:carec49526@chainds.com?subject=Application%20for%20{{ job['title']}}&body=My%20name%20%3Cyour%20name%20here%3E%0D%0AYour%20resume%20link%20%3Cresume%20link%3E%0D%0AYour%20portfolio%20link%20%3Cportfolio%20link%3E"
+      type="button"
+      class="btn btn-outline-dark"
+      >Apply</a
+    >
+  </div>
+</div>
+{% else %}
+<div class="text-center">
+  <p>No open positions available at this moment.</p>
+</div>
+{% endfor %}

@@ -1,0 +1,15 @@
+.banner {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

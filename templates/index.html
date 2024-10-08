@@ -1,0 +1,63 @@
+{% extends "base.html" %} {% block title %}Home | Career Website{% endblock %}
+{% block content %}
+
+<section>
+  <b><h1 class="text-center mb-4">Career Website</h1></b>
+</section>
+
+<!-- Image -->
+<section class="text-center mb-5">
+  <img
+    src="{{ url_for('static', filename='images/banner.jpg') }}"
+    class="banner img-fluid rounded"
+    alt="Career Image"
+  />
+</section>
+
+<!-- About Section -->
+<section class="mb-5">
+  <h2 class="text-center">About Our Website</h2>
+  <p class="lead">
+    Welcome to our Career Website, your dedicated partner in navigating the
+    complex job market. Our platform is designed to help you find the perfect
+    job that aligns with your skills, aspirations, and career goals.
+  </p>
+  <p>
+    Whether you're just starting your career journey, seeking an internship, or
+    looking for new opportunities to advance your professional life, we provide
+    a comprehensive suite of tools and resources to empower you. Our
+    user-friendly interface allows you to search and apply for jobs
+    effortlessly, ensuring you can focus on what matters most: finding your
+    dream job.
+  </p>
+  <p>
+    Our extensive job listings cover various industries, enabling you to explore
+    a multitude of options and discover roles that match your interests and
+    qualifications. With insightful career advice, resume-building tools, and
+    interview preparation resources, we equip you with everything you need to
+    present yourself confidently to potential employers.
+  </p>
+  <p>
+    Join our community of job seekers and employers today, and take the first
+    step towards your future. Our mission is to connect talent with opportunity,
+    helping you thrive in a dynamic job landscape. Let us help you unlock your
+    potential and achieve your career aspirations!
+  </p>
+</section>
+
+<!-- Open Positions -->
+<section>
+  <h2 class="text-center">Open Positions</h2>
+  {% include "jobitem.html" %}
+</section>
+
+<!-- Contact Button -->
+<section class="m-3 d-flex align-items-center justify-content-center">
+  <a
+    href="mailto:carec49526@chainds.com?subject=Question%20about%20job&body=My%20name%20%3Cyour%20name%20here%3E%0D%0AQuestion%20about%20job%20%3Cquestion%20here%3E"
+    type="button"
+    class="btn btn-primary"
+    >Contact Us</a
+  >
+</section>
+{% endblock %}
